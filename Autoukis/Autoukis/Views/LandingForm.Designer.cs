@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_ViewMap = new System.Windows.Forms.Button();
             this.btn_Feeding = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btn_Notifications = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_ViewMap
             // 
-            this.button1.Location = new System.Drawing.Point(39, 69);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(286, 72);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_ViewMap.Location = new System.Drawing.Point(39, 69);
+            this.btn_ViewMap.Name = "btn_ViewMap";
+            this.btn_ViewMap.Size = new System.Drawing.Size(286, 72);
+            this.btn_ViewMap.TabIndex = 0;
+            this.btn_ViewMap.Text = "Peržiūrėti ūkį iš viršaus";
+            this.btn_ViewMap.UseVisualStyleBackColor = true;
+            this.btn_ViewMap.Click += new System.EventHandler(this.btn_ViewMap_Click);
             // 
             // btn_Feeding
             // 
@@ -81,7 +82,7 @@
             this.Controls.Add(this.btn_Notifications);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_Feeding);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_ViewMap);
             this.Name = "LandingForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -90,7 +91,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_ViewMap;
         private System.Windows.Forms.Button btn_Feeding;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_Notifications;

@@ -26,5 +26,13 @@ namespace Autoukis
 
             Hide();
         }
+
+        void btn_ViewMap_Click(object sender, EventArgs e)
+        {
+            var mapForm = new MapForm();
+            mapForm.Show();
+
+            Hide();
+        }
     }
 }
