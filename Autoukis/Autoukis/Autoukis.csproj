@@ -51,6 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\RobotController.cs" />
+    <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\Robot.cs" />
+    <Compile Include="Models\TechnicalEquipment.cs" />
     <Compile Include="Views\FeedingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +92,11 @@
     </Compile>
     <Compile Include="Views\RobotsFrom.Designer.cs">
       <DependentUpon>RobotsFrom.cs</DependentUpon>
+    <Compile Include="Views\RobotSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RobotSelectionForm.Designer.cs">
+      <DependentUpon>RobotSelectionForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Views\FeedingForm.resx">
       <DependentUpon>FeedingForm.cs</DependentUpon>
@@ -115,6 +124,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\RobotsFrom.resx">
       <DependentUpon>RobotsFrom.cs</DependentUpon>
+    <EmbeddedResource Include="Views\RobotSelectionForm.resx">
+      <DependentUpon>RobotSelectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -133,5 +144,6 @@
   <ItemGroup>
     <EmbeddedResource Include="teamdev.licenses" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
