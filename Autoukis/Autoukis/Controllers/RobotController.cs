@@ -6,9 +6,9 @@ namespace Autoukis.Controllers
 {
     public class RobotController
     {
-        public List<Robot> Robots { get; } //TODO Will be stored in database.
+        public List<Robotas> Robots { get; } //TODO Will be stored in database.
 
-        public (Position? position, List<byte[]> view) CheckState(int robotId)
+        public (Pozicija position, List<byte[]> view) CheckState(int robotId)
         {
             var robot = Robots.Find(x => x.Id == robotId);
             if (robot == null)
@@ -17,7 +17,7 @@ namespace Autoukis.Controllers
                 //display a message!
                 return (null, null);
             }
-            if (robot.Alive()) return (robot.Position, robot.View);
+            if (robot.Alive()) return (robot?.TechninePriemone.Position, robot.Vaizdas);
             //TODO
             //else display a message that the robot have not returned a signal
             //and return nulls.
@@ -27,9 +27,9 @@ namespace Autoukis.Controllers
         //The RobotSelectionForm does call this method. If list is empty
         //the notification will be displayed.
         //Else the list will be displayed in the form.
-        public List<Robot> GetAvailableRobots()
+        public List<Robotas> GetAvailableRobots()
         {
-            return Robots.Where(x => x.Availability).ToList();
+            return Robots.Where(x => x.Prieinamumas).ToList();
         }
 
         public bool SendSignal(int robotId)

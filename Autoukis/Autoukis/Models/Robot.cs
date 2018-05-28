@@ -3,13 +3,15 @@ using System.Collections.Generic;
 
 namespace Autoukis.Models
 {
-    public class Robot: TechnicalEquipment
+    public class Robotas
     {
-        public double BatteryLevel { get; set; }
-        public bool Availability { get; set; }
-        public List<byte[]> View { get; set; }
+        public int Id { get; set; }
+        public double BaterijosLygis { get; set; }
+        public bool Prieinamumas { get; set; }
+        public List<byte[]> Vaizdas { get; set; }
+        public TechninePriemone TechninePriemone { get; set; }
 
-        public void GoTowardsBrokenEquipment(Position position)
+        public void GoTowardsBrokenEquipment(Pozicija position)
         {
             //TODO Implement with Arduino.
         }
@@ -32,5 +34,6 @@ namespace Autoukis.Models
             var guess = random.Next(1, 101);
             return guess <= 95;
         }
+
     }
 }

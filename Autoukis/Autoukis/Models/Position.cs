@@ -1,8 +1,9 @@
 ﻿namespace Autoukis.Models
 {
-    public struct Position
+    public class Pozicija
     {
-        public double x;
-        public double y;
+        public int Id { get; set; }
+        public double X { get; set; }
+        public double Y { get; set; }
     }
 }

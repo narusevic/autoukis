@@ -38,7 +38,14 @@
     <Reference Include="DotNetBrowser.Chromium, Version=1.14.3.0, Culture=neutral, PublicKeyToken=b0b5aaca9c95c84e, processorArchitecture=MSIL">
       <HintPath>..\packages\DotNetBrowser.1.14.3\lib\DotNetBrowser.Chromium.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,8 +58,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\FarmContext.cs" />
     <Compile Include="Controllers\RobotController.cs" />
+    <Compile Include="Migrations\201805282252210_Initial.cs" />
+    <Compile Include="Migrations\201805282252210_Initial.Designer.cs">
+      <DependentUpon>201805282252210_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805282255232_zemes plotai.cs" />
+    <Compile Include="Migrations\201805282255232_zemes plotai.Designer.cs">
+      <DependentUpon>201805282255232_zemes plotai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Sesija.cs" />
+    <Compile Include="Models\Uzklausa.cs" />
+    <Compile Include="Models\Gyvulys.cs" />
+    <Compile Include="Models\Signalas.cs" />
+    <Compile Include="Models\ZemesPlotas.cs" />
     <Compile Include="Models\Position.cs" />
+    <Compile Include="Models\Drone.cs" />
+    <Compile Include="Models\Sensor.cs" />
     <Compile Include="Models\Robot.cs" />
     <Compile Include="Models\TechnicalEquipment.cs" />
     <Compile Include="Views\FeedingForm.cs">
@@ -92,12 +116,19 @@
     </Compile>
     <Compile Include="Views\RobotsFrom.Designer.cs">
       <DependentUpon>RobotsFrom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\RobotSelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\RobotSelectionForm.Designer.cs">
       <DependentUpon>RobotSelectionForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Migrations\201805282252210_Initial.resx">
+      <DependentUpon>201805282252210_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805282255232_zemes plotai.resx">
+      <DependentUpon>201805282255232_zemes plotai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FeedingForm.resx">
       <DependentUpon>FeedingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +155,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\RobotsFrom.resx">
       <DependentUpon>RobotsFrom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\RobotSelectionForm.resx">
       <DependentUpon>RobotSelectionForm.cs</DependentUpon>
     </EmbeddedResource>
