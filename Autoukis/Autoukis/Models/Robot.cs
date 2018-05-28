@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Autoukis.Models
 {
@@ -10,22 +11,26 @@ namespace Autoukis.Models
 
         public void GoTowardsBrokenEquipment(Position position)
         {
-            
+            //TODO Implement with Arduino.
         }
 
         public void Demount(int equipmentId)
         {
-            
+            //TODO Implement with Arduino.
         }
 
         public void DragToWarehouse(int equipmentId)
         {
-            
+            //TODO Implement with Arduino.
         }
 
-        public void Alive()
+        public bool Alive()
         {
-            
+            ///With probability 95%, the robot will receive the signal,
+            /// and therefore it notifies the controller that it is alive.
+            var random = new Random();
+            var guess = random.Next(1, 101);
+            return guess <= 95;
         }
     }
 }

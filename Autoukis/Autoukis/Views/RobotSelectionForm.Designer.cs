@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // RobotSelectionForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(334, 491);
+            this.Name = "RobotSelectionForm";
             this.Text = "RobotSelectionForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
