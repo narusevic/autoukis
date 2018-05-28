@@ -34,5 +34,13 @@ namespace Autoukis
 
             Hide();
         }
+
+        void btn_Robots_Click(object sender, EventArgs e)
+        {
+            var mapForm = new RobotsFrom();
+            mapForm.Show();
+
+            Hide();
+        }
     }
 }

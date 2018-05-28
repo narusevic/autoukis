@@ -30,7 +30,7 @@
         {
             this.btn_ViewMap = new System.Windows.Forms.Button();
             this.btn_Feeding = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_Robots = new System.Windows.Forms.Button();
             this.btn_Notifications = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -55,14 +55,15 @@
             this.btn_Feeding.UseVisualStyleBackColor = true;
             this.btn_Feeding.Click += new System.EventHandler(this.btn_Feeding_Click);
             // 
-            // button3
+            // btn_Robots
             // 
-            this.button3.Location = new System.Drawing.Point(39, 308);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(286, 72);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Robots.Location = new System.Drawing.Point(39, 308);
+            this.btn_Robots.Name = "btn_Robots";
+            this.btn_Robots.Size = new System.Drawing.Size(286, 72);
+            this.btn_Robots.TabIndex = 2;
+            this.btn_Robots.Text = "Robotai";
+            this.btn_Robots.UseVisualStyleBackColor = true;
+            this.btn_Robots.Click += new System.EventHandler(this.btn_Robots_Click);
             // 
             // btn_Notifications
             // 
@@ -80,7 +81,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 554);
             this.Controls.Add(this.btn_Notifications);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_Robots);
             this.Controls.Add(this.btn_Feeding);
             this.Controls.Add(this.btn_ViewMap);
             this.Name = "LandingForm";
@@ -93,7 +94,7 @@
 
         private System.Windows.Forms.Button btn_ViewMap;
         private System.Windows.Forms.Button btn_Feeding;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_Robots;
         private System.Windows.Forms.Button btn_Notifications;
     }
 }
